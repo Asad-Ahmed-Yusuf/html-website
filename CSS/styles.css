@@ -316,6 +316,17 @@ a {
 .plan .list__item {
   margin-bottom: 2rem;
 }
+.plan--popular .card__header {
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(/CSS/images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  top: -6px;
+}
 
 @media screen and (min-width: 1024px) {
   .plan__name {
