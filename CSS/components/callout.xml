@@ -1,0 +1,15 @@
+    <div class="callout callout--primary">
+      <div class="grid grid--1x2">
+        <div class="callout--content">
+          <h2 class="callout__header">Sign Up now</h2>
+          <p class="callout__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            voluptas magni perferendis itaque suscipit qui dicta, iusto rem
+            repudiandae distinctio!
+          </p>
+        </div>
+        <a href="#" class="btn btn--secondary callout__btn btn--scratched"
+          >GET STARTED</a
+        >
+      </div>
+    </div>
