@@ -25,9 +25,18 @@
           <a class="btn btn--accent btn--stratched" href="">Get Started</a>
         </header>
 
-        <div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/CSS/images/banner.webp 1x, /CSS/images/banner@2x.webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="/CSS/images/banner.png 1x, /CSS/images/banner@2x.png 2x"
+          />
+
           <img class="hero__image" src="/CSS/images/banner.png" alt="" />
-        </div>
+        </picture>
       </div>
     </section>
     <script src="js/main.js"></script>
