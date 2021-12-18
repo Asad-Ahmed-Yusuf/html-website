@@ -312,7 +312,19 @@ input .btn--scratched {
   color: white;
 }
 
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
 /* PLANS */
+
+.plan {
+  transition: 1s;
+}
 .plan__name {
   color: white;
   margin: 0;
@@ -343,6 +355,10 @@ input .btn--scratched {
 .plan .list__item {
   margin-bottom: 2rem;
 }
+
+.plan--popular {
+  transform: scale(1.1);
+}
 .plan--popular .card__header {
   position: relative;
 }
@@ -355,6 +371,9 @@ input .btn--scratched {
   top: -6px;
 }
 
+.plan:hover {
+  transform: scale(1.2);
+}
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 5rem;
@@ -441,7 +460,11 @@ input .btn--scratched {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /*Testimonials*/
 .testimonial-card {
   padding: 3rem;
@@ -695,3 +718,12 @@ nav.list {
 }
 
 /*BLOCK PLANS*/
+
+.block-plans .grid {
+  gap: 18rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
