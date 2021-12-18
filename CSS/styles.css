@@ -634,3 +634,29 @@ nav.list {
     border: 0;
   }
 }
+
+/*HERO */
+
+.hero__tagline {
+  font-size: 2rem;
+  color: rgb(212, 209, 209);
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+.hero__image {
+  width: 100%;
+}
+
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0%;
+  }
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+}
