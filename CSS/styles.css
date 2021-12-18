@@ -727,3 +727,33 @@ nav.list {
   max-width: 500px;
   margin: 0 auto;
 }
+
+/*Media block*/
+.media--block {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*Features*/
+.featured__heading {
+  margin: 1rem 0;
+}
+
+.feature {
+  gap: 4rem 2rem;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__image {
+  width: 100%;
+  margin: 12rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
