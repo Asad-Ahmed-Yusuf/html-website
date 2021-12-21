@@ -1,3 +1,4 @@
+@import "./normalize.css";
 ::selection {
   background: var(--color-primary);
 }
@@ -204,7 +205,7 @@ a {
   font-size: 1.8rem;
   font-weight: 600rem;
   text-transform: uppercase;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   border: 0;
   outline: 0;
   border-radius: 40px;
@@ -281,6 +282,7 @@ input .btn--scratched {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -328,6 +330,10 @@ input .btn--scratched {
 
 /* PLANS */
 
+.card_margins {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
 .plan {
   transition: 1s;
 }
@@ -385,10 +391,13 @@ input .btn--scratched {
     font-size: 5rem;
   }
   .plan__billing-cyle {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .plan__description {
     font-size: 1.7rem;
+  }
+  .card_margins {
+    padding: 0 3rem;
   }
 }
 
@@ -549,23 +558,23 @@ input .btn--scratched {
 }
 
 .collapsible__chevron {
-  transform: rotate(45deg);
+  transform: rotate(-90deg);
   transition: transform 0.3s;
 }
 
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s;
   opacity: 0;
+  transition: all 0.3s;
 }
 
 .collapsible--expanded .collapsible__chevron {
-  transform: rotate(115deg);
+  transform: rotate(0);
 }
 
 .collapsible--expanded .collapsible__content {
-  max-height: 100vh;
+  max-height: 100%;
   opacity: 1;
 }
 
@@ -603,6 +612,7 @@ input .btn--scratched {
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 /*Contianer this is so our content is never greater than 1140px*/
@@ -619,8 +629,8 @@ input .btn--scratched {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 1rem;
-  align-content: center;
+  padding: 1rem;
+  align-items: center;
 }
 
 nav.list {
@@ -636,13 +646,16 @@ nav.list {
   color: white;
   transition: color 0.3s;
 }
+.nav__item:last-of-type {
+  border-bottom: none;
+}
 
 .nav__item > a:hover {
   color: grey;
 }
 
 .nav__toggler {
-  opacity: 50%;
+  opacity: 0.5;
   transition: box-shadow 0.15s;
   cursor: pointer;
 }
@@ -654,6 +667,7 @@ nav.list {
 
 .nav__brand {
   transform: translateY(5px);
+  width: 150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -706,8 +720,9 @@ nav.list {
 }
 
 .block--domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -780,5 +795,76 @@ nav.list {
   .block-showcase__image > img {
     max-width: 700px;
     width: auto;
+  }
+}
+
+/*Footer*/
+
+.footer {
+  background: #232323;
+  padding-top: 10rem;
+}
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+.footer__copyright {
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.3;
+}
+.footer__brand img {
+  max-width: 230px;
+}
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+    font-weight: 100;
+  }
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+  .footer__heading {
+    font-size: 1.6rem;
   }
 }
